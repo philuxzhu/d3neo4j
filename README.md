@@ -7,8 +7,6 @@
 
 ## Running
 
-First of all, make sure you have ruby and sass gem installed. Then, clone the repository, install all dependencies, build and serve the project.
-
 ```bash
 > git clone https://github.com/zeus1999/neo4jd3.git
 > npm install
