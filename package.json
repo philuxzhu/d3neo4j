@@ -1,0 +1,26 @@
+{
+  "name": "d3neo4j",
+  "version": "1.0.0",
+  "description": "[Neo4j](https://github.com/neo4j) graph visualization using [D3.js](https://github.com/d3/d3).",
+  "main": "lib/d3neo4j.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeus1999/d3neo4j.git"
+  },
+  "keywords": [
+    "d3",
+    "neo4j"
+  ],
+  "author": "Tobias Jung",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zeus1999/d3neo4j/issues"
+  },
+  "homepage": "https://github.com/zeus1999/d3neo4j#readme"
+}
