@@ -1,6 +1,6 @@
 {
   "name": "d3neo4j.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "[Neo4j](https://github.com/neo4j) graph visualization using [D3.js](https://github.com/d3/d3).",
   "main": "lib/d3neo4j.js",
   "directories": {
