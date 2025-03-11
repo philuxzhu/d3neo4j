@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.js"></script>
+        <script src="../lib/neo4j.js"></script>
+
+        <link rel="stylesheet" href="../lib/neo4j.css">
+
+        <style>
+            html, body {
+                height: 100%;
+                width: 100%;
+                padding: 0px;
+                margin: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="neo4jd3" style="width: 100%; height: 100%;"></div>
+
+
+        <script>
+
+            const graphData = 
+            {
+    "results": [
+        {
+            "columns": [
+                "user",
+                "entity"
+            ],
+            "data": [
+                {
+                    "graph": {
+                        "nodes": [
+                            {
+                                "id": "1001",
+                                "name": "Anna Schmidt",
+                                "labels": ["Person"],
+                                "properties": {}
+                            },
+                            {
+                                "id": "1002",
+                                "name": "Ben Müller",
+                                "labels": ["Person"],
+                                "properties": {}
+                            },
+                            {
+                                "id": "1003",
+                                "name": "Clara Weber",
+                                "labels": ["Person"],
+                                "properties": {}
+                            },
+                            {
+                                "id": "1004",
+                                "name": "David Fischer",
+                                "labels": ["Person"],
+                                "properties": {}
+                            },
+                            {
+                                "id": "2001",
+                                "name": "TechCorp GmbH",
+                                "labels": ["Unternehmen"],
+                                "properties": {}
+                            }
+                        ],
+                        "relationships": [
+                            {
+                                "id": "R100",
+                                "type": "Freund",
+                                "startNode": "1001",
+                                "endNode": "1002",
+                                "properties": {}
+                            },
+                            {
+                                "id": "R101",
+                                "type": "Arbeitskollege",
+                                "startNode": "1002",
+                                "endNode": "1003",
+                                "properties": {}
+                            },
+                            {
+                                "id": "R102",
+                                "type": "Angestellter",
+                                "startNode": "1003",
+                                "endNode": "2001",
+                                "properties": {}
+                            },
+                            {
+                                "id": "R103",
+                                "type": "Chef",
+                                "startNode": "1004",
+                                "endNode": "2001",
+                                "properties": {}
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "errors": []
+}
+
+
+                new d3Neo4J('#neo4jd3', {
+                    highlight: [
+                        {
+                            id: "1004"
+                        }
+                    ],
+                    neo4jData: graphData,
+                    infoPanel: false,
+                    minCollision: 100,
+                    nodeRadius: 25,
+                    showNodeLabel: true,
+                    nodeLabelFunction: node => node.name
+                });
+
+        </script>
+    </body>
+</html>
