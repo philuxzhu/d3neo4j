@@ -8,6 +8,17 @@ body {
 	font-size: 20px
 }
 
+.d3neo4j-tooltip {
+	position: absolute;
+	background: rgba(0,0,0,0.8);
+	color: #fff;
+	padding: 8px 10px;
+	border-radius: 4px;
+	font-size: 14px;
+	pointer-events: none;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
 .d3neo4j-graph {
 	border: 1px solid #ddd;
 	border-radius: 5px
