@@ -102,6 +102,24 @@
     "errors": []
 }
 
+                function closeModal() {
+                    const modal = document.getElementById('nodeModal');
+                    if (modal) {
+                        modal.style.display = 'none';
+                    }
+                }
+
+                // 点击模态框外部关闭
+                window.addEventListener('click', function(event) {
+                    const modal = document.getElementById('nodeModal');
+                    if (modal && modal.style.display === 'block') {
+                        // 如果点击的不是模态框内容区域
+                        if (!event.target.closest('.modal-content')) {
+                            closeModal();
+                        }
+                    }
+                });
+
 
                 new d3Neo4J('#neo4jd3', {
                     highlight: [
